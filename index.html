@@ -4,19 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DoctorCare</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <nav>
-    <ul>
+  <nav class="wrapper">
+    <ul class="nav-logos">
       <li><img src="/assets/Logo-purple.png" alt="Logomarca escrito DoctorCare"></li>
+      <li><img src="/assets/icons-hamburguer.svg"</li>
     </ul>
     <ul>
       <li>Inicio</li>
       <li>Sobre</li>
       <li>Serviços</li>
       <li>Depoimentos </li>
-      <li>Agende sua consulta</li>
+      <li>
+        <button>
+          <img src="/assets/logo-whats.svg">
+          Agende sua consulte
+        </button>
+      </li>
     </ul>
     <ul>
       <li>Insta</li>
@@ -26,42 +38,35 @@
   </nav>
 
   <main>
-    <div class="container">
-      <div class="container-content">
-        <h4>BOAS-VINDAS A DOCTORCARE</h4>
+    <header class="wrapper">
+      <div>
+        <h4>BOAS-VINDAS A DOCTORCARE &#128075</h4>
         <h1>Assistência médica simplificada para todos</h1>
         <p>Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura a longo prazo</p>
-
         <button>
-          <img src="">Agende sua consulte
+          <img src="/assets/logo-whats.svg">
+            Agende sua consulte
         </button>
-
-        <img 
-          src="/assets/img-destaque.png" 
-          alt="Mulher negra vestindo moletom verde e sorrindo" 
+        <img
+          src="/assets/img-destaque.png"
+          alt="Mulher negra vestindo moletom verde e sorrindo"
         />
       </div>
-
-      <div>
-        <img src="">
+      <div class="stats">
+        <ul>
+          <li><h2>+3.500</h2></li>
+          <li><h5>Pacientes atendidos</h5></li>
+        </ul>
+        <ul>
+          <li><h2>+15</h2></li>
+          <li><h5>Especialidades disponíveis</h5></li>
+        </ul>
+        <ul>
+          <li><h2>+10</h2></li>
+          <li><h5>Anos no mercado</h5></li>
+        </ul>
       </div>
-      
-    </div>
-
-    <div class="container-pacientes">
-      <ul>
-        <li>+3.500</li>
-        <li>Pacientes atendidos</li>
-      </ul>
-      <ul>
-        <li>+15</li>
-        <li>Especialidades disponíveis</li>
-      </ul>
-      <ul>
-        <li>+10</li>
-        <li>Anos no mercado</li>
-      </ul>
-    </div>
+    </header>
 
     <div class="container-services">
       <h4>Serviços</h4>
@@ -69,34 +74,34 @@
 
       <div class="services-section">
         <ul>
-          <li><img src=""></li>
+          <li><img src="/assets/ckeck.svg"></li>
           <li><h3>Problemas digestivos</h3></li>
           <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto culpa fugit dolorum! Dolores voluptatum nesciunt minus. </p></li>
         </ul>
 
         <ul>
-          <li><img src=""></li>
+          <li><img src="/assets/ckeck.svg"></li>
           <li><h3>Saúde Hormonal</h3></li>
           <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto culpa fugit dolorum! Dolores voluptatum nesciunt minus. </p></li>
         </ul>
         <ul>
-          <li><img src=""></li>
+          <li><img src="/assets/ckeck.svg"></li>
           <li><h3>Bem-estar mental</h3></li>
           <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto culpa fugit dolorum! Dolores voluptatum nesciunt minus. </p></li>
         </ul>
         <ul>
-          <li><img src=""></li>
+          <li><img src="/assets/ckeck.svg"></li>
           <li><h3>Cuidados Pediátricos</h3></li>
           <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto culpa fugit dolorum! Dolores voluptatum nesciunt minus. </p></li>
         </ul>
         <ul>
-          <li><img src=""></li>
+          <li><img src="/assets/ckeck.svg"></li>
           <li><h3>Autoimine e inflamação</h3></li>
           <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto culpa fugit dolorum! Dolores voluptatum nesciunt minus. </p></li>
         </ul>
         <ul>
-          <li><img src=""></li>
-          <li>Saúde od coração</li>
+          <li><img src="/assets/ckeck.svg"></li>
+          <li><h3>Saúde do coração</h3></li>
           <li><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto culpa fugit dolorum! Dolores voluptatum nesciunt minus. </p></li>
         </ul>
       </div>
@@ -107,16 +112,29 @@
       <h1>Entenda que somos e porque existimos</h1>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto culpa fugit dolorum! Dolores voluptatum nesciunt minus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto culpa fugit dolorum! Dolores voluptatum nesciunt minus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto culpa fugit dolorum! Dolores voluptatum nesciunt minus. </p>
       
-      <img src="">
+      <img src="/assets/photo-about.svg">
     </div>
 
     <div class="container-contact">
       <h1>Entre em contato com a gente!</h1>
-      <p><a><img src="">R.Amauri Souza,436</a></p>
-      <p><a><img src="">Contato@beautysalon.com</a></p>
-      <button><img src="">Agende sua consulte</button>
-      <img src="">
+      <p><a><img src="/assets/icons-local.svg">R.Amauri Souza,436</a></p>
+      <p><a><img src="/assets/icons-email.svg">Contato@beautysalon.com</a></p>
+      <button>
+        <img src="/assets/logo-whats.svg">
+        Agende sua consulte
+      </button>
+      <img src="/assets/photo-end.svg">
     </div>
   </main>
+  <footer>
+    <img src="/assets/Logo-white.png">
+    <p>2021 Beautysalon.</p>
+    <p>&copy;Todos os direitos reservados.</p>
+    <ul>
+      <li><img src="/assets/icons-insta.svg"></li>
+      <li><img src="/assets/icons-face.svg"></li>
+      <li><img src="/assets/icons-youTube.svg"></li>
+    </ul>
+  </footer>
 </body>
 </html>
