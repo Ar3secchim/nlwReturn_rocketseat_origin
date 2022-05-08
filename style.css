@@ -16,6 +16,12 @@
 
   --nav-height:7.2rem;
 }
+
+Body,
+html{
+  width:100%;
+  height:100%;
+}
 /* === GERAL ======================================== */
 html ul{
   list-style: none;
@@ -95,7 +101,7 @@ header button{
   padding-inline:2.4rem;
 }
 
-/* === NAVIGATION ================================ */
+/* === MENU ================================ */
 nav{
   display: flex;
   flex-direction: column;
@@ -106,12 +112,13 @@ nav{
   left: 50%;
   /* deslocamento no eixo x */
   transform: translatex(-50%);
-
+  width:100vw;
 }
 
 nav .nav-logos{
   display: flex;
   align-items: center;
+  justify-content:space-around;
 
   height:var(--nav-height);
   padding: 0rem 2rem;
@@ -119,11 +126,15 @@ nav .nav-logos{
   width:100vw;
 }
 
-body nav .close-menu{
-  display: none;
+nav button.open-menu,
+nav button.close-menu{
+  border: none;
+  background: none;
 }
 
+/* === MENU- SCROLL ================================ */
 nav.scroll {
+  display: inline-block;
   background-color:var(--primary-color);
   width:100vw;
   height: 7.2rem;
@@ -137,6 +148,66 @@ nav.scroll ul.wrapper li:nth-child(2) svg path{
   stroke:white;
 }
 
+/* === MENU-EXPANDED ============================== */
+/* button dentro do menu */
+body.menu-expanded{
+  overflow:hidden;
+}
+
+body nav .close-menu{
+  position: relative;
+  top: -5.5rem;
+  left: 13rem;
+  z-index: 100;
+}
+/* pseudo para navegação */
+/* body.menu-expanded > :not(nav){
+  display:none;
+} */
+
+.menu,
+.close-menu,
+body.menu-expanded nav .open-menu{
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded nav .menu,
+body.menu-expanded nav .close-menu{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+body.menu-expanded nav{
+  background-color:var(--primary-color);
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+body.menu-expanded nav .menu{
+  background-color:var(--primary-color);
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+body.menu-expanded  nav .nav-logos{
+  margin: 0;
+}
+
+body.menu-expanded svg:nth-child(1) path{
+  fill:white;
+}
+
+body.menu-expanded ul.wrapper li:nth-child(2) svg path{
+  stroke:white;
+}
+
 nav button.button{
   background-color: var(--Secondary-color);
   color: var(--primary-color);
@@ -145,23 +216,18 @@ nav button.button{
 
   width: 24rem;
   height: 5rem;
-  padding:0;
+  
   margin: 1rem auto;
 
   border-radius: 3rem;
   font-weight: 700;
 
   border: none;
+  cursor: pointer;
 }
 
 nav button.button svg{
   display: none;
-}
-
-nav button.open-menu,
-nav button.close-menu{
-  border: none;
-  background: none;
 }
 
 nav .social-media{
@@ -172,6 +238,7 @@ nav .social-media{
   gap: 2.5rem;
   padding: 3rem;
 }
+
 nav .menu-section{
   display: flex;
   flex-direction: column;
@@ -179,57 +246,16 @@ nav .menu-section{
 
   gap: 4.8rem;
   padding-top: 6rem;
-}
-/* === NAVIGATION-MENU ================================ */
-body.menu-expanded{
-  overflow: hidden;
-}
 
-.menu,
-.close-menu,
-body.menu-expanded .open-menu{
-  opacity: 0;
-  visibility: hidden;
+  font-size:1.8rem;
+  color:var(--Secondary-color);
 }
 
-body.menu-expanded .close-menu,
-body.menu-expanded .menu{
-  opacity: 1;
-  visibility: visible;
+nav .menu-section a{
+  color: var(--Secondary-color);
+  text-decoration: none;
 }
 
-body.menu-expanded .menu{
-  position: fixed;
-
-  width:100vw;
-  height:100vh;
-  background-color: var(--primary-color);
-
-  display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
-  justify-content: center;
-
-  font-size:2.4rem;
-  color: white;
-
-}
-
-body.menu-expanded nav{
-  position: relative;
-}
-body.menu-expanded .nav-logos{
-  position: relative;
-  z-index: 4;
-}
-
-body.menu-expanded svg:nth-child(1) path{
-  fill:white;
-}
-
-body.menu-expanded ul.wrapper li:nth-child(2) svg path{
-  stroke:white;
-}
 
 /* === HEADER ================================ */
 header{
@@ -244,7 +270,7 @@ header::before{
   content: "";
   background-color:var(--brand-cinza);
 
-  width:100vw;
+  width:100%;
   height:108rem;
 
   display: block;
