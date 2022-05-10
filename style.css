@@ -12,7 +12,7 @@
   --Secondary-color:hsla(0, 0%, 100%, 1);
 
   --brand-beige:hsla(0, 0%, 98%, 1);
-  --brand-cinza:hsla(257, 100%, 93%, 1);
+  --brand-purple:hsla(257, 100%, 93%, 1);
 
   --nav-height:7.2rem;
 }
@@ -21,6 +21,9 @@ Body,
 html{
   width:100%;
   height:100%;
+}
+html{
+  scroll-behavior: smooth;
 }
 /* === GERAL ======================================== */
 html ul{
@@ -67,7 +70,8 @@ h5{
   color:var(--primary-color);
 }
 
-p{
+h6{
+  font-size:1.6rem;
   font-weight:400;
   color:var(--paragraph);
 }
@@ -113,6 +117,7 @@ nav{
   /* deslocamento no eixo x */
   transform: translatex(-50%);
   width:100vw;
+
 }
 
 nav .nav-logos{
@@ -144,7 +149,7 @@ nav.scroll svg:nth-child(1) path{
   fill:white;
 }
 
-nav.scroll ul.wrapper li:nth-child(2) svg path{
+nav.scroll .open-menu svg path{
   stroke:white;
 }
 
@@ -152,6 +157,8 @@ nav.scroll ul.wrapper li:nth-child(2) svg path{
 /* button dentro do menu */
 body.menu-expanded{
   overflow:hidden;
+  
+
 }
 
 body nav .close-menu{
@@ -160,10 +167,15 @@ body nav .close-menu{
   left: 13rem;
   z-index: 100;
 }
-/* pseudo para navegação */
-/* body.menu-expanded > :not(nav){
+
+/* pseudo para navegação
+body.menu-expanded > :not(nav){
   display:none;
-} */
+}  */
+
+body .menu{
+  display:none;
+}
 
 .menu,
 .close-menu,
@@ -177,7 +189,6 @@ body.menu-expanded nav .close-menu{
   opacity: 1;
   visibility: visible;
 }
-
 
 body.menu-expanded nav{
   background-color:var(--primary-color);
@@ -258,24 +269,24 @@ nav .menu-section a{
 
 
 /* === HEADER ================================ */
-header{
+body main header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
 }
 
-header::before{
+body main header::before{
   /* cria uma tag no html */
   content: "";
-  background-color:var(--brand-cinza);
+  background-color:var(--brand-purple);
 
   width:100%;
   height:108rem;
 
   display: block;
   position: absolute;
-  z-index: -1;
+  z-index: -3;
   top: 0;
   left: 0;
 }
@@ -306,6 +317,153 @@ header::before{
 
   padding: 4rem 0 4rem 0;
 
-  background-color: var(--brand-beige);
+  background-color: hsla(0, 0%, 100%, 1);
 }
 
+/* === SERVICE ================================ */
+#services-container::before{
+  content: "";
+  background-color:var(--brand-beige); 
+  padding-bottom: 9rem;
+
+  width:100%;
+  height:213rem;
+
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 108rem;
+  left: 0;
+}
+
+#services header{
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+} 
+
+
+.services-section{
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: flex-start;
+
+  padding: 2.4rem;
+
+  background-color: hsla(0, 0%, 100%, 1);
+  margin: 3.2rem 0rem;
+
+  border-radius:1rem;
+  border: 1px solid hsla(257, 100%, 93%, 1);
+
+  text-align: left;
+}
+
+/* === ABOUT ================================ */
+#about-container::before{
+  content: "";
+  background-color:hsla(257, 100%, 93%, 1); 
+
+  width:100%;
+  height:94rem;
+
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 330rem;
+  left: 0;
+}
+
+#about header {
+  padding-top: 20rem;
+  display:flex;
+  align-items: flex-start;
+}
+
+#about h1{
+  padding: 1.6rem 0rem 2.4rem 0rem;
+}
+
+#about h6{
+  text-align: left;
+  padding-bottom: 6rem;
+}
+
+#about img{
+  padding-bottom: 10rem;
+}
+
+/* === CONTACT ================================ */
+#contact{
+  margin-top: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom:10rem;
+
+  text-align: left;
+}
+
+#contact h1{
+  text-align: left;
+  padding-bottom: 3.2rem;
+}
+
+.local-icons{
+  display: flex;
+  align-content: center;
+
+  gap: 1rem;
+  padding-bottom: 1.6rem;
+}
+
+#contact button{
+  background-color: var(--primary-color);
+  
+  text-transform: uppercase;
+  color: var(--Secondary-color);
+  font-weight:700;
+  
+  border: none;
+  border-radius: 3rem;
+  
+  height: 5rem;
+  width: 26.3rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 1rem;
+  
+  padding:2rem;
+  margin:3.2rem auto;
+}
+
+/* === FOOTER ================================ */
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: var(--primary-color);
+  height: 28.5rem;
+  padding: 6rem 0rem 2.6rem 2.6rem;
+}
+
+footer div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.6rem 0rem 3.2rem 0rem;
+
+  gap:2rem;
+
+  color: var(--Secondary-color);
+}
+
+footer ul{
+  display: flex;
+  gap: 3.2rem;
+}
