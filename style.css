@@ -115,7 +115,7 @@ nav{
 
   left: 50%;
   /* deslocamento no eixo x */
-  transform: translatex(-50%);
+  transform: translateX(-50%);
   width:100vw;
 
 }
@@ -154,11 +154,14 @@ nav.scroll .open-menu svg path{
 }
 
 /* === MENU-EXPANDED ============================== */
-/* button dentro do menu */
+/* body.menu-expanded nav .menu{
+  transition: transform 300ms;
+
+  transform: translateY(0);
+} */
+
 body.menu-expanded{
   overflow:hidden;
-  
-
 }
 
 body nav .close-menu{
@@ -172,10 +175,6 @@ body nav .close-menu{
 body.menu-expanded > :not(nav){
   display:none;
 }  */
-
-body .menu{
-  display:none;
-}
 
 .menu,
 .close-menu,
@@ -198,6 +197,10 @@ body.menu-expanded nav{
   height: 100vh;
 }
 
+body .menu{
+  transform: translateY(100%);
+}
+
 body.menu-expanded nav .menu{
   background-color:var(--primary-color);
   position: relative;
@@ -205,6 +208,9 @@ body.menu-expanded nav .menu{
   display: flex;
   flex-direction: column;
   gap: 5rem;
+
+  transition: transform 400ms;
+  transform: translateY(0);
 }
 
 body.menu-expanded  nav .nav-logos{
@@ -269,20 +275,26 @@ nav .menu-section a{
 
 
 /* === HEADER ================================ */
-body main header{
+body main #home{
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
-body main header::before{
+#home .wrapper{
+  width: 37.5rem;
+  margin: auto;
+  padding-inline:2.4rem;
+  padding-top: 9rem;
+}
+
+body main #home::before{
   /* cria uma tag no html */
   content: "";
   background-color:var(--brand-purple);
 
   width:100%;
-  height:108rem;
+  height:98rem;
 
   display: block;
   position: absolute;
@@ -322,7 +334,7 @@ body main header::before{
 
 /* === SERVICE ================================ */
 #services-container::before{
-  content: "";
+  content: "";  
   background-color:var(--brand-beige); 
   padding-bottom: 9rem;
 
@@ -339,6 +351,8 @@ body main header::before{
 #services header{
   padding-top: 6rem;
   padding-bottom: 4rem;
+  text-align: left;
+  align-items:flex-start;
 } 
 
 

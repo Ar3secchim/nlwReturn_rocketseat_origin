@@ -14,3 +14,10 @@ function openMenu(){
 function closeMenu(){
   document.body.classList.remove("menu-expanded")
 }
+
+// Start LIB
+ScrollReveal({
+  origin:'top',
+  distance: '50px',
+  duration:700,
+}).reveal('#home')
