@@ -76,7 +76,7 @@ h6{
   color:var(--paragraph);
 }
 
-header button{
+.button{
   background-color: var(--primary-color);
   
   text-transform: uppercase;
@@ -111,7 +111,7 @@ nav{
   flex-direction: column;
   
   position: fixed;
-  z-index: 3;
+  z-index: 4;
 
   left: 50%;
   /* deslocamento no eixo x */
@@ -154,12 +154,22 @@ nav.scroll .open-menu svg path{
 }
 
 /* === MENU-EXPANDED ============================== */
-/* body.menu-expanded nav .menu{
-  transition: transform 300ms;
+#navigation .menu{
+  display:none;
+}
+body.menu-expanded #navigation .menu{
+  display: flex;
+} 
+body.menu-expanded .button {
+  background-color: var(--Secondary-color);
+  color: var(--primary-color);
 
-  transform: translateY(0);
-} */
+  margin: 0;
+}
 
+body.menu-expanded .button svg{
+  display: none;
+}
 body.menu-expanded{
   overflow:hidden;
 }
@@ -334,27 +344,24 @@ body main #home::before{
 
 /* === SERVICE ================================ */
 #services-container::before{
-  content: "";  
-  background-color:var(--brand-beige); 
-  padding-bottom: 9rem;
+  content: "";
+  background-color: #F9F9F9;; 
 
   width:100%;
-  height:213rem;
+  height:225rem;
 
   display: block;
   position: absolute;
   z-index: -1;
-  top: 108rem;
+  top: 95rem;
   left: 0;
 }
 
 #services header{
-  padding-top: 6rem;
-  padding-bottom: 4rem;
-  text-align: left;
-  align-items:flex-start;
+  padding-top: 10rem;
+  display:flex;
+  flex-direction: column;
 } 
-
 
 .services-section{
   display: flex;
@@ -384,13 +391,14 @@ body main #home::before{
   display: block;
   position: absolute;
   z-index: -1;
-  top: 330rem;
+  top: 320rem;
   left: 0;
 }
 
 #about header {
-  padding-top: 20rem;
+  padding-top: 15rem;
   display:flex;
+  flex-direction: column;
   align-items: flex-start;
 }
 
