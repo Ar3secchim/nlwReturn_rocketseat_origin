@@ -1,35 +1,32 @@
-// add event listeners page all
-window.addEventListener('scroll', onScroll);
-
-onScroll()
 function onScroll(){
-  showNavOnScroll()
-  showBackTopButtonOnScroll()
+  navOnScroll();
+  backToTop();
 }
 
-function showNavOnScroll(){
-  if(scrollY > 0){
-    navigation.classList.add('scroll')
+function navOnScroll(){
+  if (scrollY > 0) {
+    document.body.classList.add("scroll");
   } else {
-    navigation.classList.remove('scroll')
+    document.body.classList.remove("scroll");
   }
 }
 
-function showBackTopButtonOnScroll(){
-  if(scrollY > 500){
+function backToTop() {
+  if (scrollY > 500) {
     backToTopButton.classList.add('show')
-  } else {
+  }else{
     backToTopButton.classList.remove('show')
   }
 }
 
-function openMenu(){
+function openMenu() {
   document.body.classList.add("menu-expanded")
 }
 
-function closeMenu(){
+function closeMenu() {
   document.body.classList.remove("menu-expanded")
 }
+
 
 // Start LIB
 ScrollReveal({

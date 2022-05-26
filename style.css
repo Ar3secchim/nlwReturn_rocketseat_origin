@@ -5,14 +5,13 @@
 }
 :root {
   font-size: 62.5%; /* 62.5 -> transforma 16px para 10 px como referência */
-  --hue: 256;
-  --primary-color: hsla(var(--hue), 68%, 30%, 1);
+  --primary-color: hsla(256, 68%, 30%, 1);
   --headline: hsla(210, 11%, 15%, 1);
   --paragraph: hsla(210, 9%, 31%, 1);
   --Secondary-color: hsla(0, 0%, 100%, 1);
 
   --brand-beige: hsla(0, 0%, 98%, 1);
-  --brand-purple: hsla(var(--hue), 100%, 93%, 1);
+  --brand-purple: hsla(256, 100%, 93%, 1);
 
   --brand-dark: rgb(21, 10, 53);
   --nav-height: 7.2rem;
@@ -110,14 +109,6 @@ h6 {
   padding-inline: 2.4rem;
 }
 
-/* custon colors */
-#navigation .open-menu svg path{
-  stroke: var(--primary-color);
-}
-
-#navigation.scroll .open-menu svg path{
-  stroke: var(--Secondary-color);
-}
 /* === MENU ================================ */
 nav {
   display: flex;
@@ -150,18 +141,18 @@ nav button.close-menu {
 }
 
 /* === MENU- SCROLL ================================ */
-nav.scroll {
+body.scroll nav {
   display: inline-block;
   background-color: var(--primary-color);
   width: 100vw;
   height: 7.2rem;
 }
 
-nav.scroll svg:nth-child(1) path {
+body.scroll svg:nth-child(1) path {
   fill: white;
 }
 
-nav.scroll .open-menu svg path {
+body.scroll .open-menu svg path {
   stroke: white;
 }
 
