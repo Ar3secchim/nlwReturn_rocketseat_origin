@@ -557,7 +557,7 @@ footer ul {
   }
 
   /* NAV ========================= */
-  nav#navigation{
+  body nav#navigation{
     display:flex;
     flex-direction: row;
     padding: 0rem 2rem;
@@ -567,7 +567,7 @@ footer ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 50%;
+    width: 35%;
     padding:0rem 2rem;
   }
 
@@ -587,6 +587,7 @@ footer ul {
     font-weight: 700;
     padding-right: 3rem;
   }
+
   nav#navigation .menu-section{
     display: flex;
   }
@@ -612,15 +613,6 @@ footer ul {
     transition: 300ms;
   }
 
-  body.scroll nav#navigation .menu-section li a::after{
-    background-color:white;
-    opacity: 1;
-  }
-
-  nav#navigation .menu li a:hover::after{
-    padding-inline: 0.8rem;
-    width: 100%;
-  }
   
   nav#navigation .menu ul a.button {
     font-weight: 700;
@@ -634,14 +626,13 @@ footer ul {
     color: var(--primary-color);
   }
 
-  nav#navigation .menu ul a.button:hover{
-    background-color: var(--primary-color);
-    filter: brightness(1.2);
-    border: none;
-    color: var(--Secondary-color);
-  }
 
   /* scroll */
+  body.scroll nav#navigation{
+    background-color: var(--primary-color);
+    padding: 0rem 2rem;
+  }
+  
   body.scroll nav#navigation .menu-section a{
     color: var(--Secondary-color);
     font-size: 1.8rem;
@@ -651,23 +642,153 @@ footer ul {
     opacity: 0.7;
   }
 
-  body.scroll nav#navigation .menu ul a.button {
-    background-color: var(--Secondary-color);
-    color: var(--primary-color);
-    padding-right: 1rem;
-  }
-
-  body.scroll nav#navigation .menu ul a.button:hover{
-    background-color: var(--Primary-color);
-    filter: brightness(1.9);
-
-    border: solid 1px var(--Secondary-color);
-    border-color: var(--Secondary-color);
-    color: var(--Secondary-color);
-  }
-
   nav#navigation .menu ul a.button svg{
     display: none;
   }
 
+  body.scroll nav#navigation .menu ul a.button {
+    border: 1px solid var(--Secondary-color);
+    color: var(--Secondary-color);
+  }
+  
+  /* HOME */
+  body main #home::before{
+    height:60rem;
+  }
+
+  #home .wrapper {
+    display: grid;
+    width: min(112rem, 100%);
+  
+    grid-template-areas: 
+            "a b"
+            "a b"
+            "c c";
+    
+  }
+
+  #home .wrapper div{
+    grid-area: a;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 8rem;
+  }
+
+  #home .wrapper div p, h4{
+    font-size: 1.8rem;
+    text-align: left;
+  }
+
+  #home .wrapper div h1{
+    font-size: 4rem;
+    text-align: left;
+  }
+
+  #home .wrapper div a.button{
+    text-align: left;
+    margin: 0;
+  }
+
+  #home .wrapper img{
+    grid-area: b;
+  }
+
+  #home .wrapper .stats{
+    grid-area: c;
+    flex-direction: row;
+    justify-content:space-between;
+
+    padding: 5rem; 
+  }
+
+  #home .wrapper .stats ul:nth-child(1){
+    border-right: 2px solid #d4d4d4;
+    padding:0rem 5rem 0rem 0rem;
+  }
+
+  #home .wrapper .stats ul:nth-child(2){
+    border-right: 2px solid #d4d4d4;
+    padding:0rem 5rem 0rem 0rem;
+  }
+
+  /*  SERVICES*/
+  #services-container::before{
+    top: 50rem;
+    height:90rem;
+  }
+
+  #services header{
+    align-items: center;
+    padding: 2rem;
+  }
+
+  #services div{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  #services div .services-section{    
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  /* ABOUT */
+  #about-container::before{
+    background-color: var(--brand-purple);
+    top: 140rem;
+    height:59rem;
+  }
+
+  #about{
+    display:grid;
+    grid-template-areas: 
+    "a b"
+    "a b";
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    padding:13rem 5rem 0rem 5rem;
+  }
+
+  #about header, h6{
+    grid-area: b;
+    text-align: left;
+    padding: 0rem;
+  }
+
+  #about img{
+    grid-area: a;
+  }
+
+  /* Contact */
+
+  #contact{
+    display:grid;
+    grid-template-areas: 
+    "a b"
+    "a b";
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem auto;
+  }
+
+  #contact header{
+    grid-area: a
+    text-align: left;
+    padding: 0rem;
+  }
+  #contact h1{
+    padding: 0rem 5rem 0rem 0rem;
+  }
+
+  #contact img{
+    grid-area: b;
+  }
+  
+  #contact .button{
+    margin: 2rem 0rem 0rem 0rem;
+  }
 }

@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 
-<body onscroll="backToTop()" class="">
+<body onscroll="onScroll()" class="">
   <nav id="navigation" class="">
     <div class="wrapper nav-logos">
       <div>
@@ -113,14 +113,16 @@
   <main>
     <header id="home">
       <div class="wrapper">
-        <h4>BOAS-VINDAS A DOCTORCARE &#128075</h4>
-        <h1>Assistência médica simplificada para todos</h1>
-        <p>Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura
-          a longo prazo</p>
-        <a href="#contact" class="button">
-          <img src="/assets/logo-whats.svg">
-          Agende sua consulte
-        </a>
+        <div>
+          <h4>BOAS-VINDAS A DOCTORCARE &#128075</h4>
+          <h1>Assistência médica simplificada para todos</h1>
+          <p>Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura
+            a longo prazo</p>
+          <a href="#contact" class="button">
+            <img src="/assets/logo-whats.svg">
+            Agende sua consulte
+          </a>
+        </div>
         <img src="/assets/img-destaque.png" alt="Mulher negra vestindo moletom verde e sorrindo" />
       
       <div class="stats">
@@ -202,12 +204,13 @@
     <section id="about" class="wrapper">
       <div id="about-container"></div>
 
-      <header>
-        <h4>Sobre Nós</h4>
-        <h1>Entenda que somos e porque existimos</h1>
-      </header>
-
-      <h6 class="content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </h6>
+      <div>
+        <header>
+          <h4>Sobre Nós</h4>
+          <h1>Entenda que somos e porque existimos</h1>
+        </header>
+        <h6 class="content">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </h6>
+      </div>
       
       <img src="/assets/photo-about.svg">
     </section>
@@ -225,17 +228,18 @@
         </div>
 
         <div class="local-icons">
-            <img src="/assets/icons-email.svg">
-            <a href="">Contato@beautysalon.com</a>
+          <img src="/assets/icons-email.svg">
+          <a href="">Contato@beautysalon.com</a>
         </div>
+
+        <a class="button" href="http://">
+          <img src="/assets/logo-whats.svg">
+          Agende sua consulte
+        </a>
       </div>
 
-      <a class="button" href="http://">
-        <img src="/assets/logo-whats.svg">
-        Agende sua consulte
-      </a>
-
       <img class="img-contact" src="/assets/photo-end.svg">
+      
     </section>
   </main>
 
