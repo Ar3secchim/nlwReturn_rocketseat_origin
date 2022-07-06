@@ -42,3 +42,5 @@ ScrollReveal({
   #about .content,
   #contact header
 `)
+
+
